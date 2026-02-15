@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"/>
+</head>
+<body>
+
+<header>
+    <h1>Admin Panel</h1>
+</header>
+
+<nav>
+    <div class="nav-container">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="admin-login.html">Admin</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<section class="admin">
+    <h2>Add New Course</h2>
+    <input type="text" id="courseName" placeholder="Course Name">
+    <button onclick="addCourse()">Add Course</button>
+
+    <h3>Current Courses:</h3>
+    <ul id="courseList"></ul>
+</section>
+
+<button id="logoutBtn" onclick="logoutAdmin()">Logout</button>
+
+<script src="js/script.js"></script>
+
+<footer class="footer">
+    <p>© 2026 Unique Computer Institute. All Rights Reserved.</p>
+
+    <div class="socials">
+        <a href="#">
+            <i aria-hidden="true" class="mdi mdi-facebook"></i>
+        </a>
+        <a href="#">
+            <i aria-hidden="true" class="mdi mdi-twitter"></i>
+        </a>
+        <a href="#">
+            <i aria-hidden="true" class="mdi mdi-instagram"></i>
+        </a>
+        <a href="#">
+            <i aria-hidden="true" class="mdi mdi-linkedin"></i>
+        </a>
+    </div>
+</footer>
+
+</body>
+</html>

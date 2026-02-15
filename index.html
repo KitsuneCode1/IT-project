@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unique Computer Institute</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"/>
+</head>
+<body>
+
+<div class="main-wrapper">
+    <header>
+        <h1>Unique Computer Institute</h1>
+        <p>Empowering Digital Skills</p>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin-login.html">Admin</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+    <section class="hero">
+        <h1>Welcome to Unique Computer Institute</h1>
+        <p>Building Practical Computer Skills for the Digital World</p>
+        <a href="courses.html" class="hero-btn">View Our Courses</a>
+    </section>
+
+    <section class="intro">
+        <h2>🎓 Welcome</h2>
+
+        <p>
+            Welcome to Unique Computer Institute. We provide professional computer
+            and IT training to prepare students for the digital world.
+        </p>
+
+    </section>
+
+    <section class="testimonials">
+        <h2>💬 What Our Students Say</h2>
+
+        <div class="student-testimonials">
+            <div class="testimonial-box">
+            <p>
+                “The training at Unique Computer Institute helped me gain practical
+                computer skills that I now use confidently.”
+            </p>
+            <span>— John D., Web Design Student</span>
+        </div>
+
+        <div class="testimonial-box">
+            <p>
+                “The instructors were patient and the learning environment was very supportive.”
+            </p>
+            <span>— Mary A., Computer Basics Student</span>
+        </div>
+
+        <div class="testimonial-box">
+            <p>
+                “This institute gave me a strong foundation in HTML and CSS during my IT program.”
+            </p>
+            <span>— Samuel K., Computer Science Student</span>
+        </div>
+        </div>
+    </section>
+    <!-- Login Modal -->
+    <section class="login-section" id="loginSection" style="display:none;">
+        <h2>Admin Login</h2>
+        <input type="password" id="adminPassword" placeholder="Enter Admin Password">
+        <button onclick="checkAdminLogin()">Login</button>
+    </section>
+
+
+    <footer class="footer">
+        <p>© 2026 Unique Computer Institute. All Rights Reserved.</p>
+
+        <div class="socials">
+            <a href="#">
+                <i aria-hidden="true" class="mdi mdi-facebook"></i>
+            </a>
+            <a href="#">
+                <i aria-hidden="true" class="mdi mdi-twitter"></i>
+            </a>
+            <a href="#">
+                <i aria-hidden="true" class="mdi mdi-instagram"></i>
+            </a>
+            <a href="#">
+                <i aria-hidden="true" class="mdi mdi-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

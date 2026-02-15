@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section class="admin-login" id="loginSection">
+    <h2>Admin Login</h2>
+    <div class="login">
+        <input type="password" id="adminPassword" placeholder="Enter Admin Password">
+        <button onclick="checkAdminLogin()">Login</button>
+    </div>
+</section>
+
+<script>
+const ADMIN_PASSWORD = "mysecret123"; // your password here
+
+// If already logged in, redirect automatically
+if (localStorage.getItem("isAdminLoggedIn") === "true") {
+    window.location.href = "admin.html";
+}
+
+function checkAdminLogin() {
+    const input = document.getElementById("adminPassword").value;
+    if (input === ADMIN_PASSWORD) {
+        // save login status
+        localStorage.setItem("isAdminLoggedIn", "true");
+        alert("Welcome, Admin!");
+        window.location.href = "admin.html";
+    } else {
+        alert("Incorrect password. Access denied.");
+    }
+}
+
+function logoutAdmin() {
+    localStorage.removeItem("isAdminLoggedIn");
+    alert("You have been logged out.");
+    window.location.href = "admin-login.html";
+}
+</script>
+
+</body>
+</html>
+

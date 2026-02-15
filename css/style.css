@@ -1,0 +1,503 @@
+/* ---------- GENERAL ---------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 5px 0 0 0;
+    font-size: 1.2rem;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav {
+    background: #555;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+    /* max-width: 900px; */
+    padding: 20px;
+    margin: 30px auto;
+    background: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #222;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: #ffcc00;
+    color: #222;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #222;
+    color: white;
+    margin-top: 40px;
+}
+
+footer a{
+    font-size: 1.5rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+}
+/* ---------- NAVIGATION (HAMBURGER) ---------- */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #555;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Hamburger (hidden on large screens) */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* ---------- HAMBURGER ANIMATION ---------- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        background: #555;
+        transition: max-height 0.5s ease-out;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Active state triggers animation */
+    .nav-links.active {
+        max-height: 500px; /* enough to show all links */
+        transition: max-height 0.5s ease-in;
+    }
+}
+
+/* ---------- CURRENT PAGE HIGHLIGHT ---------- */
+.nav-links a.current {
+    color: #ffcc00; /* highlight color */
+    border-bottom: 2px solid #ffcc00;
+}
+#courseList li::before {
+    content: "📘 ";
+    margin-right: 6px;
+}
+
+.footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.socials a {
+    color: #969696;
+    margin: 0 8px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.socials a:hover {
+    color: #ffcc00;
+}
+
+.hero {
+    height: 80vh;
+    background: linear-gradient(to right, #222, #444);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 3rem;
+    margin-top: 0;
+    background-image: url(../img/art.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    background: #ffcc00;
+    color: #222;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        font-size: 0.85rem;
+    }
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.testimonials {
+    padding: 40px 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 30px;
+}
+
+.student-testimonials{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.testimonial-box {
+    background: white;
+    max-width: 600px;
+    margin: 15px auto;
+    width: full;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-box:hover {
+    transform: scale(1.02);
+}
+
+.testimonial-box span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+#logoutBtn{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    background-color: #555;
+}
+
+#logoutBtn:hover{
+    background-color: #ffcc00;
+}
+
+.contact-form{
+    padding: 2rem 5rem;
+    width: full;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-form h1{
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form form{
+    max-width: 550px;
+    margin: 30px 0;
+    background: white;
+    padding: 2.5rem 0;
+    padding-left: 1.8rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-form form h1{
+    font-size: 2rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.contact-form form input{
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form form textarea{
+    max-width: 500px;
+}
+
+.map{
+    width: full;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map iframe{
+    min-width: 900px;
+    max-height: 400px;
+    margin: 5rem 0;
+}
+
+.intro{
+    padding: 3rem;
+}
+
+.about-section{
+    padding: 7rem 7rem;
+    background-color: white;
+}
+
+.about-us,
+.our-mission{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-mission .about-img{
+    order: -1;
+}
+
+.about-us{
+    margin-bottom: 7rem;
+}
+
+.about-img img{
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.about-text{
+    padding-right: 10rem;
+}
+
+.our-mission .about-text{
+    padding-left: 10rem;
+    padding-right: 0;
+}
+
+.about-text h2{
+    font-size: 3rem;
+    color: #333;
+}
+
+.about-text p{
+    font-size: 1.2rem;
+}
+
+.admin{
+    padding: 3rem 5rem;
+}
+
+.admin h3{
+    margin-top: 5rem;
+}
+
+.admin-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login{
+    margin-bottom: 3rem;
+}
+
+.login input{
+    padding: .8rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+    border: 1px solid #b3b3b3;
+    outline: none;
+}
+
+.courses{
+    padding: 1rem 5rem;
+    padding-bottom: 4rem;
+    margin-bottom: 5rem;
+}
+
+.courses h1{
+    font-size: 3rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.courses p{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#courseList li{
+    margin-top: 1rem;
+}
