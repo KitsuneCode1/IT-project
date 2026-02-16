@@ -232,16 +232,29 @@ footer a{
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1;
 }
 
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
 }
 
 .hero p {
     font-size: 1.1rem;
     margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-btn {
@@ -252,6 +265,9 @@ footer a{
     border-radius: 5px;
     font-weight: bold;
     transition: all 0.3s ease;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-btn:hover {
@@ -302,9 +318,29 @@ footer a{
     padding: 40px 20px;
     background: #f4f4f4;
     text-align: center;
+    background-image: url(../img/testimonial-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.testimonials h2, 
+.student-testimonials{
+    position: relative;
+    z-index: 2;
+}
+
+.testimonials::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1;
 }
 
 .testimonials h2 {
+    color: white;
     margin-bottom: 30px;
 }
 
@@ -407,7 +443,17 @@ footer a{
 }
 
 .intro{
-    padding: 3rem;
+    padding: 5rem 10rem;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 3rem;
+}
+
+.intro p{
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .about-section{
@@ -496,6 +542,18 @@ footer a{
 .courses p{
     font-size: 1.2rem;
     font-weight: 600;
+    margin-top: 0;
+}
+
+.courses-content {
+    margin-bottom: 5rem;
+    padding: 0 10rem;
+}
+
+.courses-content h1{
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: #333;
 }
 
 #courseList li{
